@@ -3,4 +3,15 @@ const express = require('express');
 const app = express();
 const PORT = 5000; //port is the door on our computer, b/t 1 and 9999?
 //you can use more than one port
-app.listen(PORT);
+
+app.get('/', function (req, res) { //this is an anonymous callback function. study.
+    res.send('Hello World');
+});
+
+app.get('/hey', function (req, res) { //this is an anonymous callback function. study.
+    res.send('heyo');
+});
+    app.listen(PORT, function () {
+        console.log(`listening on port: ${PORT}`);
+    });
+
